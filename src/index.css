@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Include preflight (base styles) */
+@import "tailwindcss/preflight" layer(base);
+
+/* Include utilities */
+@import "tailwindcss/utilities" layer(utilities);
+
 @font-face {
   font-family: font1;
   src: url(/fonts/Lausanne-300.woff2);

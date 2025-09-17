@@ -1,72 +1,4 @@
-@import "tailwindcss/preflight" layer(base);
-@import "tailwindcss/utilities" layer(utilities);
-
-/* Force normal scaling */
-html, body {
-  zoom: 1 !important;
-  transform: scale(1) !important;
-  transform-origin: top left !important;
-  width: 100% !important;
-  height: 100% !important;
-  overflow-x: hidden;
-}
-
-/* CSS Reset */
-*, *::before, *::after {
-  box-sizing: border-box;
-  max-height: 1000000px; /* Prevent font boosting on mobile */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-text-size-adjust: 100%; /* Prevent text inflation on iOS */
-  -moz-text-size-adjust: 100%; /* Prevent text inflation on Firefox */
-  -ms-text-size-adjust: 100%; /* Prevent text inflation on IE */
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-/* Your custom styles below */
-@font-face {
-  font-family: font1;
-  src: url(/fonts/Lausanne-300.woff2);
-}
-@font-face {
-  font-family: font2;
-  src: url(/fonts/Lausanne-500.woff2);
-}
-
-.moveX{
-  animation-name: moveAnimation;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-.moveLink{
-  opacity: 0;
-  transition: all ease 0.3s;
-}
-
-.link:hover .moveLink{
-  opacity: 1;
-}
-
-@keyframes moveAnimation {
-  from{
-    transform: translateX(0);
-  }
-  to{
-    transform: translateX(-100%);
-  }
-}
-
-/* @import "tailwindcss";
+@import "tailwindcss";
 
 @import "tailwindcss/preflight" layer(base);
 
@@ -104,4 +36,4 @@ body {
   to{
     transform: translateX(-100%);
   }
-} */
+}
